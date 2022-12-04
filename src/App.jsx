@@ -18,14 +18,15 @@ function App() {
             <Route path={routes.detail} element={<Detail/>}>
                 <Route path='/dentist/:idCard' element={<Card/>}/>
             </Route>
-            <Route path={routes.favs} element={<Favs/>}/>
-            <Route path={routes.contact} element={<Contact/>}/>
+            
           </Route>   
+          <Route path={routes.favs} element={<Favs/>}/>
+          <Route path={routes.contact} element={<Contact/>}/>
           <Route path= {routes.notfound} element={<NotFound/>}/>  
       </Routes>
 
-      <Navbar/>
-      <Footer/>
+      {/* <Navbar/> */}
+      {/* <Footer/> */}
       </>
   );
 }

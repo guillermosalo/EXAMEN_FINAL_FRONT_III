@@ -12,7 +12,7 @@ const { idCard } = useParams()
   return (
     <div className="card">
       <Link>
-          <img src= './public/images/doctor.jpg' alt= 'dentista'/>
+          <img src= '/images/doctor.jpg' alt= 'dentista'/>
           <h3>{id}</h3>
           <h3>{username}</h3>
           <h3>{name}</h3>
