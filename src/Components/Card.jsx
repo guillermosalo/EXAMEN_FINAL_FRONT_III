@@ -2,11 +2,8 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-
-const Card = ({ data }) => {
-const { idItem } = useParams()
-const itemCard=data.find(item => item.id===idItem)
-console.log(itemCard);
+const Card = ({ id, name, username }) => {
+const { idCard } = useParams()
 
   const addFav = ()=>{
     // Aqui iria la logica para agregar la Card en el localStorage
@@ -15,12 +12,11 @@ console.log(itemCard);
   return (
     <div className="card">
       <Link>
-          
-          <h3>{itemCard?.id}</h3>
-          <h3>{itemCard?.username}</h3>
-          <h3>{itemCard?.name}</h3>
+          <img src= './public/images/doctor.jpg' alt= 'dentista'/>
+          <h3>{id}</h3>
+          <h3>{username}</h3>
+          <h3>{name}</h3>
        </Link>
-       {/* <img src="./public/images/doctor.jpg" alt="dentista" /> */}
 
         
        
