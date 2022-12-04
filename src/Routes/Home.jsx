@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Card from '../Components/Card'
-import { useEstadosGlobales } from '../Components/utils/GlobalContext'
+import { useEstadosGlobales } from '../Components/utils/global.context'
 
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
