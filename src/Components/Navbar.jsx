@@ -7,9 +7,8 @@ import { useState } from 'react'
 
 const Navbar = () => {
 
-  const [style, setStyle] = useState('dark')
-
-  const changeStyle = () => setStyle (<main className="dark"/>)
+  // const [style, setStyle] = useState('dark')
+  // const changeStyle = () => setStyle (<main className="dark"/>)
 
   return (
     <nav>
@@ -18,8 +17,8 @@ const Navbar = () => {
 
       <Link to= {routes.home}>Home</Link>{""}
       <Link to= {routes.contact}>Contacto</Link>{""}
-      <Link to= {routes.favs}>Favoritos</Link>{""}
-      <button onClick={changeStyle}>Change theme</button>
+      <Link to= {routes.fav}>Favoritos</Link>{""}
+      <button>Change theme</button>
       
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
       

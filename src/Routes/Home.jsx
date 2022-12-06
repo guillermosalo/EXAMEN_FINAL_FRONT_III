@@ -1,6 +1,6 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
 import Card from '../Components/Card'
+import Footer from '../Components/Footer'
 import Navbar from '../Components/Navbar'
 import { useEstadosGlobales } from '../Components/utils/global.context'
 
@@ -8,19 +8,19 @@ import { useEstadosGlobales } from '../Components/utils/global.context'
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Home = () => {
-  const { data } = useEstadosGlobales();
+  const { providerValue } = useEstadosGlobales();
+  const { dentist } = providerValue;
   
   return (
     
     <main className="" >
       <Navbar/>
       <h1>Home</h1>
-      <Outlet/>
       <div className='card-grid'>
-      {data.map(item=> <Card key={item.id} id={item.id} name={item.name} username={item.username}></Card>)}
+      {dentist.map((item)=> (<Card key={item.id} id={item.id} name={item.name} username={item.username}></Card>))}
         {/* Aqui deberias renderizar las cards */}
-    
       </div>
+      <Footer/>
     </main>
   )
 }
