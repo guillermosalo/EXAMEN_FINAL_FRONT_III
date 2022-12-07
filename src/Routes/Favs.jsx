@@ -1,7 +1,5 @@
 import React from "react";
 import Card from "../Components/Card";
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -16,7 +14,6 @@ const Favs = () => {
 
   return (
     <>
-      <Navbar/>
       <h1>Dentists Favs</h1>
       <div className="card-grid">
         {/* este componente debe consumir los destacados del localStorage */}
@@ -25,7 +22,6 @@ const Favs = () => {
            <Card key= {item.id} id={item.id} name={item.name} username={item.username}></Card>
         ))}
       </div>
-      <Footer/>
     </>
   );
 };

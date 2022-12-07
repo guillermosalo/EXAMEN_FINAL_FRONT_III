@@ -1,7 +1,5 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState, useReducer, useMemo } from "react";
 import axios from "axios";
-import { useReducer } from "react";
-import { useMemo } from "react";
 import { reducerFav } from "./reducer";
 
 export const initFav = {favs: []};

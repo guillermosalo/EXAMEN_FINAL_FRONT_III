@@ -1,7 +1,5 @@
 import React from 'react'
 import Card from '../Components/Card'
-import Footer from '../Components/Footer'
-import Navbar from '../Components/Navbar'
 import { useEstadosGlobales } from '../Components/utils/global.context'
 
 
@@ -12,15 +10,12 @@ const Home = () => {
   const { dentist } = providerValue;
   
   return (
-    
     <main className="" >
-      <Navbar/>
       <h1>Home</h1>
       <div className='card-grid'>
       {dentist.map((item)=> (<Card key={item.id} id={item.id} name={item.name} username={item.username}></Card>))}
         {/* Aqui deberias renderizar las cards */}
-      </div>
-      <Footer/>
+      </div>     
     </main>
   )
 }
