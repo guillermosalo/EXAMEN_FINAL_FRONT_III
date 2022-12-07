@@ -7,11 +7,14 @@ import Detail from "./Routes/Detail";
 import NotFound from "./Routes/NotFound";
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
+import { useEstadosGlobales } from './Components/utils/global.context';
 
 function App() {
+  const {providerValue} = useEstadosGlobales();
+  const {stateTheme} = providerValue;
 
   return (
-      <>
+      <div className={stateTheme.theme}>
       <Navbar/>
       <Routes>
           <Route path={routes.home} element={<Home/>}/>
@@ -21,7 +24,7 @@ function App() {
           <Route path={routes.notfound} element={<NotFound/>}/>  
       </Routes>
       <Footer/>
-      </>
+      </div>
   );
 }
 

@@ -1,0 +1,10 @@
+- Ver en Detail Dentist no le entra el footer , no renderiza las imagenes. 
+
+- Ver diferencia entre Detail de Vero (12 a 18) tira error y rompe el footer ?? y Detail de Geral (20 a 26).
+
+- Home tiene stateTheme pero no lo usa. 
+
+- Al cargar el theme en app se enlenteció un monton... no se puede cargar individualmente en cada page/etiqueta para que si se enlentese sea solo al cargar el modo y no cada vez que recarga el home? 
+
+- Faltaría boton para borrar 1 solo favorito? ver consigna.
+

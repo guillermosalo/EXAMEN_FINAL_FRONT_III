@@ -1,8 +1,8 @@
 import { createContext, useContext, useEffect, useState, useReducer, useMemo } from "react";
 import axios from "axios";
-import { reducerFav } from "./reducer";
+import { reducerTheme, reducerFav } from "./reducer";
 
-export const initFav = {favs: []};
+export const initState = { theme: '', data: [] };
 export const ContextGlobal = createContext();
 export const ContextProvider = ({ children }) => {
   //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
@@ -15,11 +15,13 @@ export const ContextProvider = ({ children }) => {
     .then((res) => setDentist(res.data));
   }, [])
 
-  const [state, dispatch] = useReducer(reducerFav, initFav);
+  const [stateFav, dispatchFav] = useReducer(reducerFav, initState);
+  const [stateTheme, dispatchTheme] = useReducer(reducerTheme, initState);
 
-  const providerValue = useMemo(
-    () => ({dentist, setDentist, state, dispatch}),
-    [dentist, setDentist, state, dispatch]
+
+  const providerValue = useMemo(() => ({
+    dentist, setDentist, stateFav, dispatchFav, stateTheme, dispatchTheme}),
+    [dentist, setDentist, stateFav, dispatchFav, stateTheme, dispatchTheme]
   );
 
   return (

@@ -5,14 +5,15 @@ import { useEstadosGlobales } from "./utils/global.context";
 
 const Card = ({ name, username, id }) => {
 const { providerValue } = useEstadosGlobales();
-const {state, dispatch} = providerValue;
+const {stateFav, dispatchFav} = providerValue;
+
 useEffect(() => {
-  localStorage.setItem("favs", JSON.stringify(state));
-}, [state]); 
+  localStorage.setItem("data", JSON.stringify(stateFav));
+}, [stateFav]); 
 
   const addFav = ()=>{
     // Aqui iria la logica para agregar la Card en el localStorage
-    dispatch({
+    dispatchFav({
       type: "ADD_FAV",
       payload: {name, username, id},
     });

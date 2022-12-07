@@ -7,7 +7,7 @@ import { useEstadosGlobales } from '../Components/utils/global.context'
 
 const Home = () => {
   const { providerValue } = useEstadosGlobales();
-  const { dentist } = providerValue;
+  const { dentist, stateTheme } = providerValue;
   
   return (
     <main className="" >
