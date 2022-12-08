@@ -9,15 +9,15 @@ export const ContextProvider = ({ children }) => {
   
   const [dentist, setDentist] = useState([])
   const url = 'https://jsonplaceholder.typicode.com/users'
-  
+  const [stateFav, dispatchFav] = useReducer(reducerFav, initState);
+  const [stateTheme, dispatchTheme] = useReducer(reducerTheme, initState);
+
   useEffect(() => {
     axios(url)
     .then((res) => setDentist(res.data));
   }, [])
 
-  const [stateFav, dispatchFav] = useReducer(reducerFav, initState);
-  const [stateTheme, dispatchTheme] = useReducer(reducerTheme, initState);
-
+  // ESTO SE PUEDE PONER EN LA LINEA 12 NO? 
 
   const providerValue = useMemo(() => ({
     dentist, setDentist, stateFav, dispatchFav, stateTheme, dispatchTheme}),
