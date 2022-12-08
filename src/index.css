@@ -15,8 +15,17 @@ code {
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
   border: none;
-  width: 100%;
+  border-radius: 12px ;
+  width: 80%;
   cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.8), 0 6px 20px 0 rgba(0,0,0,0.19);
+  
+}
+
+.favButton:hover {
+  transition-duration: 0.6s;
+  background-color: #c756f3;
+  color: white;
 }
 
 h1{
