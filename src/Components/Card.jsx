@@ -7,10 +7,6 @@ const Card = ({ name, username, id }) => {
 const { providerValue } = useEstadosGlobales();
 const {stateFav, dispatchFav} = providerValue;
 
-useEffect(() => {
-  localStorage.setItem("data", JSON.stringify(stateFav));
-}, [stateFav]); 
-
   const addFav = ()=>{
     // Aqui iria la logica para agregar la Card en el localStorage
     dispatchFav({
