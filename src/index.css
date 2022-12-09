@@ -24,7 +24,7 @@ code {
 
 .favButton:hover {
   transition-duration: 0.6s;
-  background-color: #c756f3;
+  background-color: #8A6DF1;
   color: white;
 }
 
@@ -116,7 +116,8 @@ form{
 
   /* ESTE ERA EL HOOVER ORIGINAL: */
  .card:hover{
-  border: 3px solid rgb(215, 110, 236);
+  border: 3px solid;
+  border-color: #8A6DF1;
  }
 /* .card:hover .circle-top, .card:hover .circle.bottom{
   transform: scale(12);
