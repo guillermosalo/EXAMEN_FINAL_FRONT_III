@@ -3,16 +3,21 @@ import axios from "axios";
 import { reducerTheme, reducerFav } from "./reducer";
 
 export const initThemeState = { theme: ''};
-export const initFavState = {data:[]}
+export const initFavState = []
 export const ContextGlobal = createContext();
 export const ContextProvider = ({ children }) => {
   //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
   
   const [dentist, setDentist] = useState([])
   const url = 'https://jsonplaceholder.typicode.com/users'
-  const [stateFav, dispatchFav] = useReducer(reducerFav, initFavState);
-  
+  const [stateFav, dispatchFav] = useReducer(reducerFav, initFavState, initFav);
   const [stateTheme, dispatchTheme] = useReducer(reducerTheme, initThemeState);
+
+  function initFav(initFavState) {
+    return localStorage.getItem('data')
+    ? JSON.parse(localStorage.getItem('data'))
+    : initFavState
+  }
 
   useEffect(() => {
     axios(url)
