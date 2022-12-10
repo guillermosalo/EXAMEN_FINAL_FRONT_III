@@ -34,7 +34,7 @@ const Favs = () => {
   return (
     <>
       <h1>Dentistas Favoritos</h1>
-      <button onClick={handleDeleteAll}>Borrar Todos</button>
+      <button onClick={handleDeleteAll} id="borrarTodos">Borrar Todos</button>
       <div className="card-grid">
         {/* este componente debe consumir los destacados del localStorage */}
         {/* Deberan renderizar una Card por cada uno de ellos */}

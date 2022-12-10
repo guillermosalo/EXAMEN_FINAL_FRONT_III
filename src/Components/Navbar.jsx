@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className={stateTheme.theme}>
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
-     
+
       <Link to= {routes.home}>Home</Link>{""}
       <Link to= {routes.contact}>Contacto</Link>{""}
       <Link to= {routes.fav}>Favoritos</Link>{""}
