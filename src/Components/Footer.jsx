@@ -1,7 +1,6 @@
 import React from 'react'
 import { useEstadosGlobales } from './utils/global.context'
 
-
 const Footer = () => {
   const {providerValue} = useEstadosGlobales();
   const {stateTheme} = providerValue;
